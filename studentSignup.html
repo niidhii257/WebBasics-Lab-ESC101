@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Signup Form</title>
+<style>
+body { font-family: Verdana, sans-serif; max-width: 620px;
+margin: auto; padding: 20px; }
+label { display: block; margin-top: 14px; font-weight: bold; }
+.inlineLabel { display: inline; font-weight: normal; }
+fieldset { margin-top: 18px; }
+input:invalid { border: 1px solid #d33; }
+input:valid { border: 1px solid #2a9d4a; }
+</style>
+</head>
+<body>
+<h1>Student Signup Form</h1>
+<form action="#" method="post">
+<fieldset><legend>Personal Details</legend>
+<label for="studentName">Full Name</label>
+<input type="text" id="studentName" name="studentName"
+placeholder="Nidhi kumari"
+required minlength="2" maxlength="40" pattern="[A-Za-z ]+"
+title="Letters and spaces only, 2 to 40 characters">
+<label for="studentEmail">Email Address</label>
+<input type="email" id="studentEmail" name="studentEmail"
+placeholder="Nidhi.kumari@example.com" required>
+<label for="phoneNumber">Phone Number</label>
+<input type="tel" id="phoneNumber" name="phoneNumber"
+placeholder="9123456780"
+required pattern="[6-9][0-9]{9}"
+title="10 digit number starting with 6, 7, 8 or 9">
+<label for="birthDate">Date of Birth</label>
+<input type="date" id="birthDate" name="birthDate" required
+min="1995-01-01" max="2008-12-31">
+<label>Gender</label>
+<input type="radio" id="genderMale" name="gender" value="male"
+required>
+<label for="genderMale" class="inlineLabel">Male</label>
+<input type="radio" id="genderFemale" name="gender" value="female">
+<label for="genderFemale" class="inlineLabel">Female</label>
+<input type="radio" id="genderOther" name="gender" value="other">
+<label for="genderOther" class="inlineLabel">Other</label>
+</fieldset>
+<fieldset>
+<legend>Academic Details</legend>
+<label for="program">Program</label>
+<select id="program" name="program" required>
+<option value="">-- Select program --</option>
+<option value="btech-it">B.Tech Information Technology</option>
+<option value="btech-ds">B.Tech Data Science</option>
+<option value="bsc-cs">B.Sc Computer Science</option>
+</select>
+<label for="currentYear">Current Year</label>
+<input type="number" id="currentYear" name="currentYear"
+min="1" max="4" required>
+<label>Hobbies</label><input type="checkbox" id="hobbyCoding" name="hobbies" value="coding">
+<label for="hobbyCoding" class="inlineLabel">Coding</label>
+<input type="checkbox" id="hobbyDesign" name="hobbies" value="design">
+<label for="hobbyDesign" class="inlineLabel">UI Design</label>
+<label for="githubLink">GitHub Link</label>
+<input type="url" id="githubLink" name="githubLink"
+placeholder="https://github.com/yourname">
+<label for="cvFile">Upload CV (PDF)</label>
+<input type="file" id="cvFile" name="cvFile" accept=".pdf">
+</fieldset>
+.pdf">
+<fieldset>
+<legend>Account Details</legend>
+<label for="userPassword">Password</label>
+<input type="password" id="userPassword" name="userPassword"
+required minlength="10"
+pattern="(?=
+.
+*[A-Za-z])(?=
+.
+*[0-9]).{10,}"
+title="At least 10 characters with a letter and a number">
+<label for="homeAddress">Address</label>
+<textarea id="homeAddress" name="homeAddress" rows="3" cols="40"
+maxlength="150"
+placeholder="Flat no, area, city"></textarea>
+</fieldset>
+<p>
+<input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+<label for="agreeTerms" class="inlineLabel">
+I agree that the information given is true</label>
+</p>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</form>
+</body>
+</html>
